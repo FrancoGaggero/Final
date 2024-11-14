@@ -2,5 +2,5 @@
 public enum Menuprincipal {
 
 	
-	LogIn , Salir;
+	LogIn_Admin , LogIn_Cliente , Salir;
 }
