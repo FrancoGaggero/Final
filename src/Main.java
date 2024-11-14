@@ -9,8 +9,7 @@ public class Main {
 		
 		JOptionPane.showMessageDialog(null, "hola");
 		
-		yo.validarUsuario();
-		
+	
 		
 		int opcion=0;	
 		int opcionAdmin=0;

@@ -6,14 +6,16 @@ public class Cuenta {
 
 	 private int nroCuenta;
 	 private double saldo;
-	 private String tarjeta;
+	 private int tarjeta;
+	 private int codigoSeg;
 	 private LinkedList<Movimiento> movimientos;
 	 
-	public Cuenta(int nroCuenta, double saldo, String tarjeta) {
+	public Cuenta(int nroCuenta, double saldo, int tarjeta,int codigoSeg) {
 		super();
 		this.nroCuenta = nroCuenta;
 		this.saldo = saldo;
 		this.tarjeta = tarjeta;
+		this.codigoSeg= codigoSeg;
 	}
 
 	public int getNroCuenta() {
@@ -32,12 +34,20 @@ public class Cuenta {
 		this.saldo = saldo;
 	}
 
-	public String getTarjeta() {
+	public int getTarjeta() {
 		return tarjeta;
 	}
 
-	public void setTarjeta(String tarjeta) {
+	public void setTarjeta(int tarjeta) {
 		this.tarjeta = tarjeta;
+	}
+
+	public int getCodigoSeg() {
+		return codigoSeg;
+	}
+
+	public void setCodigoSeg(int codigoSeg) {
+		this.codigoSeg = codigoSeg;
 	}
 
 	public LinkedList<Movimiento> getMovimientos() {
