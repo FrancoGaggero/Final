@@ -44,7 +44,7 @@ public class Administrador extends Usuario {
 		nombre = validarCaracteres("Ingrese nombre del nuevo cliente ");
 		usuario= validarUsuario();
 		contra= validarUsuario();
-		nruCuenta= Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero de tarjeta"));
+		//nruCuenta= Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero de cuenta"));
 		
 		
 		////////SE CREO UN NUMERO AUTOMATICO DE TARJETA
@@ -70,14 +70,17 @@ public class Administrador extends Usuario {
 			Cuenta nueva = new Cuenta (nruCuenta, saldo, tarjeta,codigoseg);
 		
 			Cliente nuevo = new Cliente (nombre, contra, usuario,categoriaf, nueva);
+			
+			JOptionPane.showMessageDialog(null, "Proceso completado, se registró " + nuevo.getNombre());
+			
 		
+	}
 		
 		
 
 	
 		
 		
-	}
 	
 
 
@@ -104,7 +107,7 @@ public class Administrador extends Usuario {
 		boolean palabracorrecta=false;
 		String user ="";
 		
-		do {	
+		do { 
 			 user = JOptionPane.showInputDialog("Ingrese usuario" + "\n" + "(minimo 6 carac. 1 Mayúscula. 1 Número)");
 
 			boolean largo=false;

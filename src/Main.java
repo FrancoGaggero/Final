@@ -34,6 +34,7 @@ public class Main {
 			////////////////////// REGISTRAR NUEVO CLIENTE 
 					case 0:
 				
+						yo.RegistrarCliente();
 						
 						break;
 			//////////////////////////// VER MOVIMIENTOS	
