@@ -8,6 +8,10 @@ public class Main {
 		Administrador yo = new Administrador("franco gaggero","2042", "franadminpro", 1);
 		
 		JOptionPane.showMessageDialog(null, "hola");
+		
+		yo.validarUsuario();
+		
+		
 		int opcion=0;	
 		int opcionAdmin=0;
 		

@@ -34,6 +34,9 @@ public class Administrador extends Usuario {
 		};
 		int numeroCuenta= 0;
 		
+		nombre = JOptionPane.showInputDialog("Ingrese nombre del nuevo cliente del banco");
+		
+		
 		
 		
 
@@ -54,43 +57,77 @@ public class Administrador extends Usuario {
 		
 		String num= Integer.toString(numero);
 		 
-		if (num.length()>=5) {
-			JOptionPane.showMessageDialog(null, "El numero de cuenta debe tener por lo menos 6 dígitos");
+		if (num.length()<10) {
+			JOptionPane.showMessageDialog(null, "El numero de cuenta debe tener por lo menos 10 dígitos");
 		}else {
 			JOptionPane.showMessageDialog(null, "Numero de cuenta ingresado correctamente");
 		}
 		return true;
 	}
 	
+
+	
 	/////////////////////////VALIDADOR PARA UN USURAIO CON MINIMO 6 CARACTERES Y POR LO MENOS UN NUMERO Y UNA MAYUSCULA 
-	public boolean validarUsuario (String user) {
-		if (user.length()<=6) {
-			JOptionPane.showMessageDialog(null, "El usuario debe tener por lo menos 6 dígitos");
+	public  String validarUsuario () {
+		boolean palabracorrecta=false;
+		String user ="";
+		do {
 			
-			return false;
-		}else {
+			 user = JOptionPane.showInputDialog("Ingrese usuario");
+
+			boolean largo=false;
+			if (user.length()<6) {
+				JOptionPane.showMessageDialog(null, " El usuario debe tener al menos 6 caracteres ");
+			}else {
+				largo=true;
+			}
 			
-				for (int i = 0; i < user.length(); i++) {
-					if (Character.isDigit(user.charAt(i))) {
-						return true;
-					}
+			/////////////////////////DÍGITO
+			
+			boolean digit=false;
+			for (int i = 0; i < user.length(); i++) {
+				if (Character.isDigit(user.charAt(i))) {
+					
+					digit=true;
 				}
+
+			}
+				if (digit==false) {
+					JOptionPane.showMessageDialog(null, "No tiene numero");
+				}
+			////////////////////////// MAYÚSCULA
+			boolean upper=false;
+			for (int i = 0; i < user.length(); i++) {
+				if (Character.isUpperCase(user.charAt(i))) {
+					
+					upper=true;
+				}
+			}
+				
+				if (upper==false) {
+					JOptionPane.showMessageDialog(null, "No tiene letra mayuscula");
+				}
+				
 			
-			
-		}
-			
+			if (largo==true && upper==true && digit==true) {
+				palabracorrecta=true;
+			}
+		} while (palabracorrecta==false);
 		
 		
-		return true;
+		
+		return user;
 	}
 		
+
 		
 		
 		
+		
 
 
 
-
+//////////////////////////////VALIDAR CARACTERES NORMAL
 	public String validarCaracteres(String mensaej) {
 		String palabra = "";
 		while (palabra.equals("")) {
