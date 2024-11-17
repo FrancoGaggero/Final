@@ -1,9 +1,10 @@
-
+import java.util.LinkedList;
 
 public class Usuario {
 	private String nombre;
 	private String contra;
 	private String usuario;
+	private LinkedList<Cliente>personas; 
 	
 	
 	
@@ -14,6 +15,22 @@ public class Usuario {
 		this.contra = contra;
 		this.usuario = usuario;
 	}
+
+	
+	/////////////////////GET Y SER PARA LA LISTA 
+
+	public LinkedList<Cliente> getPersonas() {
+		return personas;
+	}
+
+
+
+
+	public void setPersonas(LinkedList<Cliente> personas) {
+		this.personas = personas;
+	}
+
+
 
 
 	public String getNombre() {

@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Administrador yo = new Administrador("franco gaggero","2042", "franadminpro", 1);
+		Administrador yo = new Administrador("franco gaggero","00", "fran", 1);
 		
 		JOptionPane.showMessageDialog(null, "hola");
 		
