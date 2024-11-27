@@ -1,6 +1,7 @@
 
 public class Cliente extends Usuario {
 	
+	
 	private String categoria;
 	Cuenta cuenta;
 
@@ -8,6 +9,23 @@ public class Cliente extends Usuario {
 		super(nombre, contra, usuario);
 		 this.categoria= categoria;
 	}
+	
+	
+	public Cliente() {
+		
+		 this.categoria= "null";
+	}
+	
+	
+
+
+	
+	public void transferir () {
+		
+		
+		
+	}
+	
 	
 	
 	

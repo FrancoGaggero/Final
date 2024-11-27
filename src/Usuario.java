@@ -4,7 +4,8 @@ public class Usuario {
 	private String nombre;
 	private String contra;
 	private String usuario;
-	private LinkedList<Cliente>personas; 
+	
+	private static LinkedList<Cliente>personas; 
 	
 	
 	
@@ -15,11 +16,18 @@ public class Usuario {
 		this.contra = contra;
 		this.usuario = usuario;
 	}
+	
+	public Usuario() {
+		super();
+		this.nombre = "null";
+		this.contra = "null";
+		this.usuario = "null";
+	}
 
 	
 	/////////////////////GET Y SER PARA LA LISTA 
 
-	public LinkedList<Cliente> getPersonas() {
+	public static LinkedList<Cliente> getPersonas() {
 		return personas;
 	}
 
@@ -27,7 +35,7 @@ public class Usuario {
 
 
 	public void setPersonas(LinkedList<Cliente> personas) {
-		this.personas = personas;
+		Usuario.personas = personas;
 	}
 
 

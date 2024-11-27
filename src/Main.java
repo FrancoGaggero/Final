@@ -5,9 +5,11 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		Cliente nuevo = new Cliente ();
 		Administrador yo = new Administrador("franco gaggero","00", "fran", 1);
 		
 		JOptionPane.showMessageDialog(null, "hola");
+		
 		
 	
 		
@@ -36,12 +38,22 @@ public class Main {
 				
 						yo.RegistrarCliente();
 						
+						
 						break;
 			//////////////////////////// VER MOVIMIENTOS	
 					case 1:
+						
+						
 		
 						break;
+				///////////////////VER CLIENTES
 					case 2:
+						if (Usuario.getPersonas().isEmpty()) {
+							JOptionPane.showMessageDialog(null, "Aún no se registraron clientes");
+						}else { //////MUESTRO LISTA DE CLIENTES LIST-ARRAY
+							yo.verClientes();
+						}
+						
 						
 						break;
 					}

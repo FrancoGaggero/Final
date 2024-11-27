@@ -8,7 +8,7 @@ public class Cuenta {
 	 private double saldo;
 	 private int tarjeta;
 	 private int codigoSeg;
-	 private LinkedList<Movimiento> movimientos;
+	 private static LinkedList<Movimiento> movimientos;
 	 
 	public Cuenta(int nroCuenta, double saldo, int tarjeta,int codigoSeg) {
 		super();
@@ -50,7 +50,7 @@ public class Cuenta {
 		this.codigoSeg = codigoSeg;
 	}
 
-	public LinkedList<Movimiento> getMovimientos() {
+	public static LinkedList<Movimiento> getMovimientos() {
 		return movimientos;
 	}
 

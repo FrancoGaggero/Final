@@ -11,6 +11,7 @@ public class Movimiento {
 		this.cliente = cliente;
 		this.detalle = detalle;
 	}
+	
 
 	public LocalDateTime getFechaHora() {
 		return fechaHora;

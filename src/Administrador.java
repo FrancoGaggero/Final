@@ -1,5 +1,9 @@
 import javax.swing.JOptionPane;
 
+
+
+
+
 public class Administrador extends Usuario {
 
 	private int idEmpleado;
@@ -12,6 +16,13 @@ public class Administrador extends Usuario {
 	
 	
 	
+	
+	
+
+
+
+
+
 	public int getIdEmpleado() {
 		return idEmpleado;
 	}
@@ -71,21 +82,52 @@ public class Administrador extends Usuario {
 		
 			Cliente nuevo = new Cliente (nombre, contra, usuario,categoriaf, nueva);
 			
-			JOptionPane.showMessageDialog(null, "Proceso completado, se registró " + nuevo.getNombre());
+			Usuario.getPersonas().add(nuevo);
+			
+			
+			JOptionPane.showMessageDialog(null, "Proceso completado, se registró a " + nuevo.getNombre());
 			
 		
 	}
-		
-		
+	
+	
+	////////////////////VER CLIENTES 
 
+
+	public Cliente verClientes () {
+		int opcion =0;
+		
+		opcion = JOptionPane.showOptionDialog(null, "LISTA DE CLIENTES DEL BANCO", null, 0, 0, null, 
+				Administrador.getPersonas().toArray(),
+				Administrador.getPersonas().toArray()[0]);
+		
+		return Administrador.getPersonas().get(opcion); 
+	}
+	
 	
 		
 		
+
+
+		
+		
 	
 
 
 
 	
+
+
+
+
+
+
+
+
+
+
+
+
 	//////////////////////////////////////	VALIDAR NUMERO DE CUENTA CON POR LO MENOS 6 DIGITOS 
 
 	public int crearNumeroTarjeta () {
